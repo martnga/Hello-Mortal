@@ -1,3 +1,5 @@
+require 'erb'
+
 class Greeter
   def call(env)
     Rack::Response.new(render("index.html.erb"))
