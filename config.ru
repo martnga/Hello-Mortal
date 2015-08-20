@@ -4,4 +4,7 @@ require 'greeter'
 # necessarily having to reload each time
 use Rack::Reloader, 0
 
-run Greeter
+# this middleware allows to load folders in a cascading order.
+# start with the first folder load it and then go to the next
+
+run Rack::Cascade.new([Rack::File.new("public"), Greeter])

@@ -20,7 +20,7 @@ class Greeter
     else Rack::Response.new("Not Found", 404)
     end
   end
- end
+
 
   def render(template)
    path = File.expand_path("../views/#{template}", __FILE__)
