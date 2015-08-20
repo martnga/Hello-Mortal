@@ -4,4 +4,4 @@ require 'greeter'
 # necessarily having to reload each time
 use Rack::Reloader, 0
 
-run Greeter.new
+run Greeter
